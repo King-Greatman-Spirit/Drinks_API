@@ -1,0 +1,25 @@
+mkdir DRINKS
+cd DRINKS
+python -m venv .venv
+source .venv/Scripts/activate
+
+pip install requirements.txt
+django-admin
+django-admin startproject drinks .
+
+python manage.py makemigrations drinks
+python manage.py migrate
+python manage.py runserver
+python manage.py createsuperuser
+username: admin
+email: email@email.com
+password: email
+
+echo "# Drinks_API" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:King-Greatman-Spirit/Drinks_API.git
+git remote add origin https://github.com/King-Greatman-Spirit/Drinks_API.git
+git push -u origin main
